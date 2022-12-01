@@ -3,7 +3,8 @@
 OUTPUT := .output
 CLANG ?= clang
 LLVM_STRIP ?= llvm-strip
-BPFTOOL ?= $(abspath ../../tools/bpftool)
+BPFTOOL ?= bpftool
+#BPFTOOL ?= $(abspath ../../tools/bpftool)
 LIBBPF_SRC := $(abspath ../../libbpf/src)
 LIBBPF_OBJ := $(abspath $(OUTPUT)/libbpf.a)
 ARCH := $(shell uname -m | sed 's/x86_64/x86/' | sed 's/aarch64/arm64/' | sed 's/ppc64le/powerpc/' | sed 's/mips.*/mips/')
